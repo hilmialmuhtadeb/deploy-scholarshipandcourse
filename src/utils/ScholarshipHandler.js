@@ -26,7 +26,7 @@ const createScholarship = (scholarship) => {
   formData.append('user_name', user_name);
   formData.append('user_id', user_id);
 
-  axios.post('https://api-scholarshipandcourse.herokuapp.com/v1/scholarships', formData, {
+  axios.post('http://scholarshipandcourse.rizqisyahrendra.tech/v1/scholarships', formData, {
     withCredentials: true,
     headers: {
       'content-type': 'multipart/form-data',
@@ -72,7 +72,7 @@ const updateScholarship = (scholarship, id) => {
 
   _checkScholarshipForm(scholarship);
   
-  axios.patch(`https://api-scholarshipandcourse.herokuapp.com/v1/scholarships/${id}`, formData, {
+  axios.patch(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/scholarships/${id}`, formData, {
     withCredentials: true,
     headers: {
       'content-type': 'multipart/form-data',
@@ -115,7 +115,7 @@ const deleteScholarship = (scholarship) => {
   })
   .then((willDelete) => {
     if (willDelete) {
-      axios.delete(`https://api-scholarshipandcourse.herokuapp.com/v1/scholarships/${scholarship._id}`, {
+      axios.delete(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/scholarships/${scholarship._id}`, {
         withCredentials: true,
       })
       .then((response) => {
@@ -139,12 +139,12 @@ const deleteScholarship = (scholarship) => {
 }
 
 const getDetailScholarship = async (id, setScholarship) => {
-  const response =  await axios.get(`https://api-scholarshipandcourse.herokuapp.com/v1/scholarships/${id}`);
+  const response =  await axios.get(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/scholarships/${id}`);
   return response.data.data;
 }
 
 const getAllScholarship = async (category, counter) => {
-  const response = await axios.get(`https://api-scholarshipandcourse.herokuapp.com/v1/scholarships?category=${category}&page=${counter}&perPage=9`);
+  const response = await axios.get(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/scholarships?category=${category}&page=${counter}&perPage=9`);
   return response.data;
 }
 

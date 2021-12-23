@@ -10,11 +10,11 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      let response = await fetch(`https://api-scholarshipandcourse.herokuapp.com/v1/scholarships?category=1`);
+      let response = await fetch(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/scholarships?category=1`);
       response = await response.json();
       setDataScholarship(response.data.slice(0,3));
 
-      response = await fetch(`https://api-scholarshipandcourse.herokuapp.com/v1/scholarships?category=2`);
+      response = await fetch(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/scholarships?category=2`);
       response = await response.json();
       setDataCourse(response.data.slice(0,3));
     }

@@ -49,7 +49,7 @@ const DetailScholarship = (props) => {
         <div className="row justify-content-center">
 
           <div className="col-md-6 mb-4 mb-md-0">
-            <img src={`https://api-scholarshipandcourse.herokuapp.com/v1/${scholarship.poster}`} alt="Poster Beasiswa" className="poster-image mb-3" />
+            <img src={`http://scholarshipandcourse.rizqisyahrendra.tech/v1/${scholarship.poster}`} alt="Poster Beasiswa" className="poster-image mb-3" />
             { actionMenu }
           </div>
 

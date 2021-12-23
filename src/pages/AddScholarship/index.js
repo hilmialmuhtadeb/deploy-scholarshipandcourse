@@ -18,7 +18,7 @@ const AddScholarship = (props) => {
     const id = props.match.params.id;
     if (id) {
       setIsEdit(true);
-      axios.get(`https://api-scholarshipandcourse.herokuapp.com/v1/scholarships/${id}`)
+      axios.get(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/scholarships/${id}`)
       .then((response) => {
         const data = response.data.data;
         let deadline = new Date(data.deadline);
@@ -27,7 +27,7 @@ const AddScholarship = (props) => {
         setCategory(data.category);
         setTitle(data.title);
         setDeadline(deadline);
-        setImage(`https://api-scholarshipandcourse.herokuapp.com/v1/${data.poster}`);
+        setImage(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/${data.poster}`);
         setDescription(data.description);
       })
       .catch((error) => console.log('error : ', error))
