@@ -8,7 +8,7 @@ const Favorite = (props) => {
     if (props.user) {
       const username = props.user.username;
       const fetchData = async () => {
-        let response = await fetch(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/favorites/${username}`);
+        let response = await fetch(`https://scholarshipandcourse.rizqisyahrendra.tech/v1/favorites/${username}`);
         response = await response.json();
         setDataScholarship(response.data);
       }
@@ -29,7 +29,7 @@ const Favorite = (props) => {
                   key={scholarship._id}
                   title={scholarship.title}
                   deadline={scholarship.deadline}
-                  poster={`http://scholarshipandcourse.rizqisyahrendra.tech/v1/${scholarship.poster}`}
+                  poster={`https://scholarshipandcourse.rizqisyahrendra.tech/v1/${scholarship.poster}`}
                   description={scholarship.description}
                   name={scholarship.author.name}
                   id={scholarship._id}

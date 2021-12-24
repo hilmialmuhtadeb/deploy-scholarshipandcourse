@@ -8,7 +8,7 @@ const registerUser = (user) => {
   formData.append('username', username);
   formData.append('password', password);
 
-  axios.post('http://scholarshipandcourse.rizqisyahrendra.tech/v1/auth/register', formData)
+  axios.post('https://scholarshipandcourse.rizqisyahrendra.tech/v1/auth/register', formData)
     .then((response) => {
       if (response.status === 201) {
         swal({
@@ -38,7 +38,7 @@ const loginUser = (user) => {
   formData.append('username', username);
   formData.append('password', password);
 
-  axios.post('http://scholarshipandcourse.rizqisyahrendra.tech/v1/auth/login', formData, {
+  axios.post('https://scholarshipandcourse.rizqisyahrendra.tech/v1/auth/login', formData, {
     withCredentials: true,
   })
     .then((response) => {
@@ -64,7 +64,7 @@ const logoutUser = () => {
   })
   .then((willLogout) => {
     if (willLogout) {
-      axios.post('http://scholarshipandcourse.rizqisyahrendra.tech/v1/auth/logout', '', {
+      axios.post('https://scholarshipandcourse.rizqisyahrendra.tech/v1/auth/logout', '', {
         withCredentials: true,
       })
         .then((res) => {

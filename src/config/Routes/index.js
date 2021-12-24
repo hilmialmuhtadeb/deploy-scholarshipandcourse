@@ -8,7 +8,7 @@ const Routes = () => {
   
   useEffect(() => {
     const getUserAuth = async () => {
-      const response = await axios.get('http://scholarshipandcourse.rizqisyahrendra.tech/v1/auth/user', {
+      const response = await axios.get('https://scholarshipandcourse.rizqisyahrendra.tech/v1/auth/user', {
         withCredentials: true,
       });
 

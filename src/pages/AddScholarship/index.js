@@ -18,7 +18,7 @@ const AddScholarship = (props) => {
     const id = props.match.params.id;
     if (id) {
       setIsEdit(true);
-      axios.get(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/scholarships/${id}`)
+      axios.get(`https://scholarshipandcourse.rizqisyahrendra.tech/v1/scholarships/${id}`)
       .then((response) => {
         const data = response.data.data;
         let deadline = new Date(data.deadline);
@@ -27,7 +27,7 @@ const AddScholarship = (props) => {
         setCategory(data.category);
         setTitle(data.title);
         setDeadline(deadline);
-        setImage(`http://scholarshipandcourse.rizqisyahrendra.tech/v1/${data.poster}`);
+        setImage(`https://scholarshipandcourse.rizqisyahrendra.tech/v1/${data.poster}`);
         setDescription(data.description);
       })
       .catch((error) => console.log('error : ', error))

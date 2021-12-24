@@ -9,7 +9,7 @@ const createScholarshipList = (pageInformation, dataScholarship) => {
             key={scholarship._id}
             title={scholarship.title}
             deadline={scholarship.deadline}
-            poster={`http://scholarshipandcourse.rizqisyahrendra.tech/v1/${scholarship.poster}`}
+            poster={`https://scholarshipandcourse.rizqisyahrendra.tech/v1/${scholarship.poster}`}
             description={scholarship.description}
             name={scholarship.author.name}
             id={scholarship._id}
